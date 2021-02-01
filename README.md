@@ -25,12 +25,14 @@ FireWall allows server owners to set strict limits on administration actions. Th
 
 *You can mention the bot instead of using a prefix*
 
-**`!prefix [prefix]`** Displays the current prefix, changes the prefix if specified
+**`/*prefix [prefix]`** Displays the current prefix, changes the prefix if specified
 
-**`!limits [index] [value]`** Displays the limits, changes an index's value if specified
+**`/*limits [index] [value]`** Displays the limits, changes an index's value if specified
 
-**`!reset [type]`** Resets the specified data or collection
+**`/*reset [type]`** Resets the specified data or collection
 
-**`!recent [ID]`** Displays recent moderation actions that can trigger the bot's limits
+**`/*recent [ID]`** Displays recent moderation actions that can trigger the bot's limits
+
+**`/*logging [#channel]`** Logs Recent Actions
 
 ---
