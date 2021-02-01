@@ -44,12 +44,31 @@ class LimitsCommand extends Command {
 
         guild.set(`limits.${key}.${duration}`, args.value)
         embed.setDescription(`*${this.client.Utils.toProperCase(key)} per ${duration} has been changed to **\`${args.value}\`**.*`)
+
+        const loggingChannel = message.guild.resolveChannel(
+          message.guild.get('loggingChannelID')
+        )
+
+        if (loggingChannel) {
+          const loggingEmbed = this.client.util
+            .embed()
+            .setColor(0x7289da)
+          await loggingChannel.send(
+            loggingEmbed.setDescription(
+                            `${this.client.Utils.toProperCase(
+                                key
+                            )} per ${duration} has been changed to **\`${
+                                args.value
+                            }\`** by ${message.author}`
+            )
+          )
+        }
       }
     }
 
-    embed.setTitle(`FireWall | Limits`)
+    embed.setTitle('FireWall | Limits')
       .setColor('00c5e3')
-      .setFooter('Made By MeTi.#0001', 'https://cdn.discordapp.com/avatars/791965942406053888/28b5f57d62c636672616d76ee2a71d0f.webp?size=1024');
+      .setFooter('Made By MeTi.#0001', 'https://cdn.discordapp.com/avatars/791965942406053888/28b5f57d62c636672616d76ee2a71d0f.webp?size=1024')
 
     let index = 1
     const guildLimits = guild.limits

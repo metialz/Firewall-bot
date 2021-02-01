@@ -11,7 +11,7 @@ FireWall allows server owners to set strict limits on administration actions. Th
 
 *Requires Node v12 for discord.js*
 
-**1.** Add `token` property to a .env file
+**1.** Add `BOT_TOKEN` property to a .env file
 
 **2.** Configure `config.js` to your personal preferences
 
