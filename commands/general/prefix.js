@@ -21,11 +21,11 @@ class PrefixCommand extends Command {
     // Return with the current prefix if none in arguments
     embed.setColor('00c5e3')
     embed.addFields(
-    { name: `The prefix is currently ${prefix}`, value: `You can change it by doing ${prefix}prefix <prefix>`, inline: false },
+      { name: `The prefix is currently ${prefix}`, value: `You can change it by doing ${prefix}prefix <prefix>`, inline: false }
   	)
-    embed.setFooter('Made By MeTi.#0001', 'https://cdn.discordapp.com/avatars/791965942406053888/28b5f57d62c636672616d76ee2a71d0f.webp?size=1024');
+    embed.setFooter('Made By MeTi.#0001', 'https://cdn.discordapp.com/avatars/791965942406053888/28b5f57d62c636672616d76ee2a71d0f.webp?size=1024')
     if (!args.prefix) return message.channel.send(embed)
-    
+
     // Check guild administrator permission
     if (!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('***Sorry**, invalid permissions.*')
 
@@ -38,9 +38,9 @@ class PrefixCommand extends Command {
     // Return with the updated prefix
     embed2.setColor('00c5e3')
     embed2.addFields(
-    { name: `Successfully changed the prefix from ${prefix} to ${args.prefix} `, value: `__ __`, inline: false },
+      { name: `Successfully changed the prefix from ${prefix} to ${args.prefix} `, value: '__ __', inline: false }
   	)
-    embed2.setFooter('Made By MeTi.#0001', 'https://cdn.discordapp.com/avatars/791965942406053888/28b5f57d62c636672616d76ee2a71d0f.webp?size=1024');
+    embed2.setFooter('Made By MeTi.#0001', 'https://cdn.discordapp.com/avatars/791965942406053888/28b5f57d62c636672616d76ee2a71d0f.webp?size=1024')
     return message.channel.send(embed2)
   }
 }

@@ -24,7 +24,6 @@ class HelpCommand extends Command {
       { name: `${prefix}recent`, value: 'Displays recent moderation actions that can trigger the bots limits', inline: false },
       { name: `${prefix}reset firewall`, value: 'Resets Limits to The Default', inline: false },
       { name: `${prefix}prefix <new prefix>`, value: 'Change Prefix', inline: false },
-      { name: `${prefix}logging #channel`, value: 'Set logging Channel', inline: false },
       { name: '\u200B', value: '__ __', inline: false },
       { name: '__> **Bot Info :**__', value: 'The FireWall is already on and securing the server once it joins the server. Nothing else needs to be done. Also dont be an idiot and give out administrator to a bunch of people. Join Support Server for more info.', inline: false },
       { name: '\u200B', value: '__ __', inline: false },

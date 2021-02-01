@@ -2,7 +2,7 @@ module.exports = {
   defaultPrefix: '/*',
   ownerID: '482489451914723338',
   _limits: 'The following are defaults.',
-  adminCanChangeLimits: true,
+  adminCanChangeLimits: false,
   limits: {
     user_removals: {
       per_minute: 5,

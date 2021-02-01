@@ -4,12 +4,18 @@ const GuardianClient = require('./core/client.js')
 const client = new GuardianClient()
 const approx = require('approximate-number')
 
-client.login(process.env.token)
+client.login(process.env.BOT_TOKEN)
 
 client.on('ready', function () {
-  client.user.setActivity(`${client.guilds.cache.size} Servers || /*help`, { type: 'PLAYING', url: 'https://www.twitch.tv/fs' })
+  client.user.setActivity(`${client.users.cache.size} users | /*help`, { type: 'STREAMING', url: 'https://discord.gg/moob' })
 
-  console.log('FireWall Is Ready!')
+  //   client.user.setActivity("Ck is on top", {type: "STREAMING", url: "https://www.twitch.tv/flight23white"})
+
+  //   client.user.setActivity("Prefix (;;)", {type: "STREAMING", url: "https://www.twitch.tv/flight23white"})
+
+  //    client.user.setActivity(`${approx(client.guilds.size)} Guilds | ;;help`, {type: "STREAMING", url: "https://www.twitch.tv/flight23white"})
+
+  console.log('FireWall ready')
 })
 
 const Discord = require('discord.js')
