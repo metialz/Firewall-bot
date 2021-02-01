@@ -33,6 +33,4 @@ FireWall allows server owners to set strict limits on administration actions. Th
 
 **`/*recent [ID]`** Displays recent moderation actions that can trigger the bot's limits
 
-**`/*logging [#channel]`** Logs Recent Actions
-
 ---
